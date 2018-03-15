@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-wrapper container ">
+        <a id="logo-container" href="#" class="brand-logo">SNMP App</a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        <!-- opciones navegador -->
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#">Monitorear Actores</a></li>
+            <li><a href="#">Agregar Actores</a></li>
+        </ul>
+
+        <!-- opciones mobiles -->
+        <ul id="nav-mobile" class="side-nav">
+            <li><a href="#">Monitorear Actores</a></li>
+            <li><a href="#">Agregar Actores</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="container">
+    <!--   Parametros   -->
+    <div class="row">
+        <br>
+        <div class="col  m12 center-block " style="  height:auto; ">
+            <div class="col m7 s12">
+                <h4 class="blue-grey-text">Dispositivos</h4>
+            </div>
+            <div class="col m5  s12  ">
+                <h4>Numero de disp</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m6">
+            <div class="card  blue-grey lighten-5">
+                <div class="card-content ">
+                    <span class="card-title">Nombre Agente <a class="btn btn-floating pulse right"></a></span>
+                    <br>
+                    <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="page-footer" style="">
+    <div class="container"><br><br></div>
+</footer>
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+<script>
+    $(".button-collapse").sideNav();
+</script>
+
+</body>
+</html>
