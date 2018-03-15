@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Starter Template - Materialize</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+
+<nav>
+    <div class="nav-wrapper container ">
+        <a id="logo-container" href="#" class="brand-logo">SNMP App</a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        <!-- opciones navegador -->
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#">Monitorear Actores</a></li>
+            <li><a href="#">Agregar Actores</a></li>
+        </ul>
+
+        <!-- opciones mobiles -->
+        <ul id="nav-mobile" class="side-nav">
+            <li><a href="#">Monitorear Actores</a></li>
+            <li><a href="#">Agregar Actores</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <div class="card-panel">
+                <h4 class="header2">Agregar Agente</h4>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="host_name" type="text">
+                                <label for="host_name">Nombre del Host : </label>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <input id="ip_Address" type="text">
+                                <label for="ip_Address">Direccion ip : </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="snmp_version" type="number">
+                                <label for="snmp_version">Version SNMP : </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="port" type="number">
+                                <label for="port">Puerto : </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="name" type="text">
+                                <label for="name">Nombre : </label>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <input id="community" type="text">
+                                <label for="community">Comunidad : </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <button class="btn cyan waves-effect waves-light right" type="submit" name="action">Agregar
+                                    <i class="mdi-content-send right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="page-footer ">
+    <br>
+    <br>
+</footer>
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+<script>
+    $(".button-collapse").sideNav();
+</script>
+
+</body>
+</html>
