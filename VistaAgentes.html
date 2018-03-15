@@ -58,15 +58,27 @@
                     </ul>
                 </div>
                 <div class="card-action">
-                    <a href="#" class=" waves-effect waves-light btn red lighten-1">Eliminar</a>
+                    <a  href="#modal1" class=" waves-effect waves-light btn modal-trigger  red lighten-1">Eliminar</a>
                     <a href="#" class="waves-effect waves-light btn">Monitorear</a>
                 </div>
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4>Advertencia</h4>
+                        <p>Si seleccionas eliminar el dispositivo sera removido </p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" id="eliminar" class="modal-action modal-close waves-effect waves-light  red lighten-1 white-text btn">Eliminar</a>
+                        <a href="#!" id="cancelar" class="modal-action modal-close waves-effect waves-light    white-text btn">Cancelar</a>
+
+                    </div>
+                </div>
+                <!-- Modal Structure ENDs-->
             </div>
         </div>
 
 
-        <!-- de ejemplo elimnalos cuando no los necesites -->
-
+        <!--TODO de ejemplo elimnalos cuando no los necesites -->
         <div class="col s12 m6">
             <div class="card  blue-grey lighten-5">
                 <div class="card-content ">
@@ -80,9 +92,22 @@
                     </ul>
                 </div>
                 <div class="card-action">
-                    <a href="#" class=" waves-effect waves-light btn red lighten-1">Eliminar</a>
+                    <a  href="#modal1" class=" waves-effect waves-light btn modal-trigger  red lighten-1">Eliminar</a>
                     <a href="#" class="waves-effect waves-light btn">Monitorear</a>
                 </div>
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4>Advertencia</h4>
+                        <p>Si seleccionas eliminar el dispositivo sera removido </p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" id="eliminar" class="modal-action modal-close waves-effect waves-light  red lighten-1 white-text btn">Eliminar</a>
+                        <a href="#!" id="cancelar" class="modal-action modal-close waves-effect waves-light    white-text btn">Cancelar</a>
+
+                    </div>
+                </div>
+                <!-- Modal Structure ENDs-->
             </div>
         </div>
         <div class="col s12 m6">
@@ -98,9 +123,22 @@
                     </ul>
                 </div>
                 <div class="card-action">
-                    <a href="#" class=" waves-effect waves-light btn red lighten-1">Eliminar</a>
+                    <a  href="#modal1" class=" waves-effect waves-light btn modal-trigger  red lighten-1">Eliminar</a>
                     <a href="#" class="waves-effect waves-light btn">Monitorear</a>
                 </div>
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4>Advertencia</h4>
+                        <p>Si seleccionas eliminar el dispositivo sera removido </p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" id="eliminar" class="modal-action modal-close waves-effect waves-light  red lighten-1 white-text btn">Eliminar</a>
+                        <a href="#!" id="cancelar" class="modal-action modal-close waves-effect waves-light    white-text btn">Cancelar</a>
+
+                    </div>
+                </div>
+                <!-- Modal Structure ENDs-->
             </div>
         </div>
         <div class="col s12 m6">
@@ -116,11 +154,29 @@
                     </ul>
                 </div>
                 <div class="card-action">
-                    <a href="#" class=" waves-effect waves-light btn red lighten-1">Eliminar</a>
+                    <a  href="#modal1" class=" waves-effect waves-light btn modal-trigger  red lighten-1">Eliminar</a>
                     <a href="#" class="waves-effect waves-light btn">Monitorear</a>
                 </div>
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4>Advertencia</h4>
+                        <p>Si seleccionas eliminar el dispositivo sera removido </p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" id="eliminar" class="modal-action modal-close waves-effect waves-light  red lighten-1 white-text btn">Eliminar</a>
+                        <a href="#!" id="cancelar" class="modal-action modal-close waves-effect waves-light    white-text btn">Cancelar</a>
+
+                    </div>
+                </div>
+                <!-- Modal Structure ENDs-->
             </div>
         </div>
+
+        <!-- TODO Fin del EJEMPLO -->
+
+
+
     </div>
 </div>
 
@@ -134,7 +190,27 @@
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>
 <script>
-    $(".button-collapse").sideNav();
+    $(document).ready(function(){
+        $(".button-collapse").sideNav();
+        // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal({
+                dismissible: true, // Modal can be dismissed by clicking outside of the modal
+                opacity: .5, // Opacity of modal background
+                inDuration: 300, // Transition in duration
+                outDuration: 200, // Transition out duration
+                startingTop: '4%', // Starting top style attribute
+                endingTop: '10%', // Ending top style attribute
+                ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+                    //alert("Ready"); //action toDO
+                    console.log(modal, trigger);
+                },
+                complete: function() {/*behavior to perfomance once modal has been actioned*/
+                   // alert('Closed');
+                                     } // Callback for Modal close
+            }
+        );
+    });
+
 </script>
 
 </body>
